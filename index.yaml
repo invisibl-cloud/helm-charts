@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  identity-manager:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-04-25T09:54:37.622666303Z"
+    description: A Helm chart for Kubernetes
+    digest: 6edcfe18221b7bab7e83e8656e787023ce27d78ffb8c12075df3e807798e37b8
+    name: identity-manager
+    type: application
+    urls:
+    - https://github.com/invisibl-cloud/helm-charts/releases/download/identity-manager-1.0.0/identity-manager-1.0.0.tgz
+    version: 1.0.0
+generated: "2022-04-25T09:54:37.622675103Z"
