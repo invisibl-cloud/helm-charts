@@ -1,0 +1,54 @@
+apiVersion: identity-manager.io/v1alpha1
+kind: WorkloadIdentity
+metadata:
+  name: demo-identity
+spec:
+  aws:
+    assumeRolePolicy: |
+      {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Principal": {
+              "Federated": "arn:aws:iam::{{ .Values.workloadIdentity.accountId }}:oidc-provider/{{ .Values.workloadIdentity.oidcProvider }}"
+            },
+            "Action": "sts:AssumeRoleWithWebIdentity",
+            "Condition": {
+              "StringEquals": {
+                "{{ .Values.workloadIdentity.oidcProvider }}:sub":"system:serviceaccount:{{ .Release.Namespace }}:{{ include "identity-manager-demo.serviceAccountName" . }}"
+              }
+            }
+          }
+        ]
+      }
+    inlinePolicies:
+      ec2-describe-0: |
+        {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "ec2:Describe*"
+              ],
+              "Resource": [
+                "*"
+              ]
+            }
+          ]
+        }
+    maxSessionDuration: 18000
+    path: /
+    pods:
+      - matchLabels:
+          app.kubernetes.io/name: demo-identity
+          app.kubernetes.io/version: v1
+    serviceAccounts:
+      - action: Create
+        name: {{ include "identity-manager-demo.serviceAccountName" . }}
+        namespace: {{ .Release.Namespace }}
+  description: 'identity for identity-manager-demo app'
+  name: demo-identity
+  provider: AWS
+
