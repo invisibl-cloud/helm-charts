@@ -1,7 +1,9 @@
 apiVersion: identity-manager.io/v1alpha1
 kind: WorkloadIdentity
 metadata:
-  name: demo-identity
+  name: {{ include "identity-manager-demo.fullname" . }}
+  labels:
+    {{- include "identity-manager-demo.labels" . | nindent 4 }}
 spec:
   aws:
     assumeRolePolicy: |
@@ -42,13 +44,12 @@ spec:
     path: /
     pods:
       - matchLabels:
-          app.kubernetes.io/name: demo-identity
-          app.kubernetes.io/version: v1
+          {{- include "identity-manager-demo.selectorLabels" . | nindent 10 }}
     serviceAccounts:
-      - action: Create
+      - action: Update
         name: {{ include "identity-manager-demo.serviceAccountName" . }}
         namespace: {{ .Release.Namespace }}
   description: 'identity for identity-manager-demo app'
-  name: demo-identity
+  name: {{ include "identity-manager-demo.fullname" . }}
   provider: AWS
 
