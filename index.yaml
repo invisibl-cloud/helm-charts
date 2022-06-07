@@ -11,4 +11,15 @@ entries:
     urls:
     - https://github.com/invisibl-cloud/helm-charts/releases/download/identity-manager-1.0.0/identity-manager-1.0.0.tgz
     version: 1.0.0
-generated: "2022-04-25T09:54:37.622675103Z"
+  identity-manager-demo:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-06-07T04:51:45.90139109Z"
+    description: A Helm chart for Kubernetes
+    digest: 767c0d39d723bb468677addd568a956f9486d067b9f7d3fa9ac7c6989b5e8d98
+    name: identity-manager-demo
+    type: application
+    urls:
+    - https://github.com/invisibl-cloud/helm-charts/releases/download/identity-manager-demo-0.1.0/identity-manager-demo-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-06-07T04:51:45.90140189Z"
