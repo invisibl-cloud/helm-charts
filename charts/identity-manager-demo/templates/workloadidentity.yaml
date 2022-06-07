@@ -1,0 +1,55 @@
+apiVersion: identity-manager.io/v1alpha1
+kind: WorkloadIdentity
+metadata:
+  name: {{ include "identity-manager-demo.fullname" . }}
+  labels:
+    {{- include "identity-manager-demo.labels" . | nindent 4 }}
+spec:
+  aws:
+    assumeRolePolicy: |
+      {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Principal": {
+              "Federated": "arn:aws:iam::{{ .Values.workloadIdentity.aws.accountId }}:oidc-provider/{{ .Values.workloadIdentity.aws.oidcProvider }}"
+            },
+            "Action": "sts:AssumeRoleWithWebIdentity",
+            "Condition": {
+              "StringEquals": {
+                "{{ .Values.workloadIdentity.aws.oidcProvider }}:sub":"system:serviceaccount:{{ .Release.Namespace }}:{{ include "identity-manager-demo.serviceAccountName" . }}"
+              }
+            }
+          }
+        ]
+      }
+    inlinePolicies:
+      ec2-describe-0: |
+        {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "ec2:Describe*"
+              ],
+              "Resource": [
+                "*"
+              ]
+            }
+          ]
+        }
+    maxSessionDuration: 18000
+    path: /
+    pods:
+      - matchLabels:
+          {{- include "identity-manager-demo.selectorLabels" . | nindent 10 }}
+    serviceAccounts:
+      - action: Update
+        name: {{ include "identity-manager-demo.serviceAccountName" . }}
+        namespace: {{ .Release.Namespace }}
+  description: 'identity for identity-manager-demo app'
+  name: {{ include "identity-manager-demo.fullname" . }}
+  provider: AWS
+
