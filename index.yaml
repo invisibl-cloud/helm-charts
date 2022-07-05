@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   gravity-init:
   - apiVersion: v2
+    appVersion: v1.0-rc12-2dc74af
+    created: "2022-07-05T18:15:20.957991221Z"
+    description: A Helm chart for gravity-init
+    digest: ce97105a5dceeea15ab04fd51f0bb33d7940fbbf20e93353a202a219d1fb9d95
+    name: gravity-init
+    type: application
+    urls:
+    - https://github.com/invisibl-cloud/helm-charts/releases/download/gravity-init-v1.0.0-rc12/gravity-init-v1.0.0-rc12.tgz
+    version: v1.0.0-rc12
+  - apiVersion: v2
     appVersion: v1.0-rc11-ce203dc
     created: "2022-06-20T13:14:52.9859952Z"
     description: A Helm chart for gravity-init
@@ -33,4 +43,4 @@ entries:
     urls:
     - https://github.com/invisibl-cloud/helm-charts/releases/download/identity-manager-demo-0.1.0/identity-manager-demo-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-20T13:14:52.986003301Z"
+generated: "2022-07-05T18:15:20.958004522Z"
