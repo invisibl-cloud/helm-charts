@@ -75,11 +75,8 @@ affinity: {}
 
 stack:
   apply: false
-  argocd:
-    source:
-      targetRevision: v1.0-rc11
   tags:
-    gravityManager: v1.0-rc11-ac5670c
-    gravityUI: v1.0-rc11-5a6e1f1
+    gravityManager: v1.0-rc12-d22bc0f
+    gravityUI: v1.0-rc12-580b7b6
+    kroda: v1.0-rc12-0497c63
     identityManager: 1.0.0
-    kroda: main-f8629fe
