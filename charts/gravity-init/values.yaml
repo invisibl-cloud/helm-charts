@@ -2,7 +2,6 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-profile: management
 tls:
   enabled: true
   genBy: helm
@@ -14,7 +13,7 @@ replicaCount: 1
 priorityClassName: system-cluster-critical
 
 image:
-  repository: invisibl/grtyinit
+  repository: invisibl/gravity-init
   pullPolicy: IfNotPresent
   tag: ""
 
@@ -76,7 +75,7 @@ affinity: {}
 stack:
   apply: false
   tags:
-    gravityManager: v1.0-rc12-d22bc0f
-    gravityUI: v1.0-rc12-580b7b6
-    kroda: v1.0-rc12-0497c63
+    gravityManager: v1.0.8-dev-83f2d9d
+    gravityUI: develop-2dff510
+    kroda: develop-f8f7344
     identityManager: 1.0.0

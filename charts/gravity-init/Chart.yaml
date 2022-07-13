@@ -3,4 +3,4 @@ name: gravity-init
 description: A Helm chart for gravity-init
 type: application
 version: v1.0.0-rc12
-appVersion: v1.0-rc12-2dc74af
+appVersion: v1.0.8-dev-d213d36

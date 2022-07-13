@@ -45,5 +45,5 @@ helm install --generate-name --wait invisibl/identity-manager-demo
 | nodeSelector | object | `{}` |  |
 | tolerations | list | `[]` |  |
 | affinity | object | `{}` |  |
-| workloadIdentity.aws.oidcProvider | string | `"oidc.provider"` |  |
-| workloadIdentity.aws.accountId | string | `"6767"` |  |
+| workloadIdentity.aws.oidcProvider | string | `""` |  |
+| workloadIdentity.aws.accountId | string | `""` |  |
