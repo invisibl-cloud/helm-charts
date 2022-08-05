@@ -1,6 +1,6 @@
 # gravity-init
 
-![version: v1.0.8](https://img.shields.io/badge/version-v1.0.8-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: v1.0.8](https://img.shields.io/badge/app%20version-v1.0.8-informational?style=flat-square)
+![version: v1.0.9](https://img.shields.io/badge/version-v1.0.9-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: v1.0.9](https://img.shields.io/badge/app%20version-v1.0.9-informational?style=flat-square)
 
 A Helm chart for gravity-init
 
@@ -42,6 +42,6 @@ helm install --generate-name --wait invisibl/gravity-init
 | tolerations | list | `[]` |  |
 | affinity | object | `{}` |  |
 | stack.apply | bool | `false` |  |
-| stack.tags.gravityManager | string | `"v1.0.8"` |  |
-| stack.tags.gravityUI | string | `"v1.0.8"` |  |
+| stack.tags.gravityManager | string | `"v1.0.9"` |  |
+| stack.tags.gravityUI | string | `"v1.0.9"` |  |
 | stack.tags.kroda | string | `"v1.0.8"` |  |

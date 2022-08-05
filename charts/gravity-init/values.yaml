@@ -75,6 +75,6 @@ affinity: {}
 stack:
   apply: false
   tags:
-    gravityManager: v1.0.8
-    gravityUI: v1.0.8
+    gravityManager: v1.0.9
+    gravityUI: v1.0.9
     kroda: v1.0.8

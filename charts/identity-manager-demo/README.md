@@ -1,6 +1,6 @@
 # identity-manager-demo
 
-![version: 0.1.0](https://img.shields.io/badge/version-0.1.0-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: 1.0.0](https://img.shields.io/badge/app%20version-1.0.0-informational?style=flat-square)
+![version: 0.1.1](https://img.shields.io/badge/version-0.1.1-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: v1.0.0](https://img.shields.io/badge/app%20version-v1.0.0-informational?style=flat-square)
 
 A Helm chart for Kubernetes
 
