@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   gravity-init:
   - apiVersion: v2
+    appVersion: v1.0.9
+    created: "2022-08-05T02:04:50.053902654Z"
+    description: A Helm chart for gravity-init
+    digest: d569addbc1e594a74e7cb81f29090a103ef1809b4b47ced357b491a83bd03b54
+    name: gravity-init
+    type: application
+    urls:
+    - https://github.com/invisibl-cloud/helm-charts/releases/download/gravity-init-v1.0.9/gravity-init-v1.0.9.tgz
+    version: v1.0.9
+  - apiVersion: v2
     appVersion: v1.0-rc12-2dc74af
     created: "2022-07-05T18:15:20.957991221Z"
     description: A Helm chart for gravity-init
@@ -34,6 +44,16 @@ entries:
     version: 1.0.0
   identity-manager-demo:
   - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2022-08-05T02:04:50.190344345Z"
+    description: A Helm chart for Kubernetes
+    digest: 28982496da3515486d3e801c70f5966c3a00526ef95016fa3418c5f760dac8d8
+    name: identity-manager-demo
+    type: application
+    urls:
+    - https://github.com/invisibl-cloud/helm-charts/releases/download/identity-manager-demo-0.1.1/identity-manager-demo-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 1.0.0
     created: "2022-06-07T04:51:45.90139109Z"
     description: A Helm chart for Kubernetes
@@ -43,4 +63,4 @@ entries:
     urls:
     - https://github.com/invisibl-cloud/helm-charts/releases/download/identity-manager-demo-0.1.0/identity-manager-demo-0.1.0.tgz
     version: 0.1.0
-generated: "2022-07-05T18:15:20.958004522Z"
+generated: "2022-08-05T02:04:50.190775142Z"
