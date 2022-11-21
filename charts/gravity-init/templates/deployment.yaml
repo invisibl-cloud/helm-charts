@@ -35,9 +35,9 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
+            - name: GRAVITY_STACK
+              value: "{{ .Values.stack.name }}"
             {{- if ne "" .Values.license }}
-            - name: GRAVITY_PROFILE
-              value: "management"
             - name: GRAVITY_LICENSE
               value: {{ .Values.license }}
             {{- end }}
